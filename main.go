@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -100,6 +101,8 @@ func addRecipe(token token, recipe string) {
 		return
 	}
 
+	log.Println(fmt.Sprintf("Adding: %s", recipe))
+
 	b, err := json.Marshal(map[string]string{"url": recipe})
 	if err != nil {
 		log.Fatalln(err)
@@ -130,5 +133,5 @@ func addRecipe(token token, recipe string) {
 		log.Fatalln(err)
 	}
 
-	log.Println(string(body))
+	log.Println(fmt.Sprintf("Response: %s", string(body)))
 }
