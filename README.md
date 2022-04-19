@@ -1,3 +1,3 @@
 # mealie-importer
 
-`go run . --file x --domain x --username x --password x`
+`go run . --file example.txt --domain http://your.ip.address:9925 --username user --password pass`
