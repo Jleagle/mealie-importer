@@ -16,10 +16,10 @@ import (
 )
 
 var (
-	file     = flag.String("file", "", "")
-	domain   = flag.String("domain", "", "")
-	username = flag.String("username", "", "")
-	password = flag.String("password", "", "")
+	file     = flag.String("file", "", "Recipe file to import")
+	domain   = flag.String("domain", "", "Mealie address")
+	username = flag.String("username", "", "Mealie username")
+	password = flag.String("password", "", "Mealie password")
 )
 
 func main() {
